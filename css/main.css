@@ -1,3 +1,44 @@
 body {
-  color: green;
+  background-image: url("http://68.media.tumblr.com/e0c1d9492d24af1dcf870981c42bfb1a/tumblr_ob7aj22Wq71ug743po1_1280.jpg");
+  background-size: cover;
+}
+
+h1 {
+  color: rgba(199, 234, 228, .9);
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: rgb(236,178,237);
+  display: inline-block;
+}
+
+.row {
+  background-color: rgba(255,255,255,.863);
+  padding: 65px;
+  margin: 1px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.column1 {
+  display: flex;
+  justify-content: center;
+}
+.column2 {
+  display: flex;
+  justify-content: center;
+}
+.column3 {
+  display: flex;
+  justify-content: center;
+}
+
+#gameboard {
+  margin-top: 75px;
+}
+
+.player1choice {
+  background-color: rgba(236,178,237,.863);
 }
