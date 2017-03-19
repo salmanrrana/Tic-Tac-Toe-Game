@@ -16,7 +16,7 @@ alert('sanity check');
 // }
 
 $(function(){
-  $('.row').on('click', (function firstPlayer(){
+  $('.row').on('click', (function(){
     if($(this).hasClass('marked1')){
       alert("Cheater! Cheater! Pumpkin Eater!");
     } else if ($(this).hasClass('marked2')){
@@ -38,8 +38,14 @@ $(function(){
       $("h1").css("color", x ? "#DC9FFA" : "#FA9FD9");
       x = !x;
   }, 400);
-});
+})
 
+
+$(function(){
+  $('button').on('click', (function (){
+    $('.row').removeClass('marked1').empty().removeClass('marked2').empty()
+  }))
+})
 
 // $(function(){
 //   // var Winner = function findWinner(){
