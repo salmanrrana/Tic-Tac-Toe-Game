@@ -2,40 +2,91 @@
 
 alert('sanity check');
 
-
-$(function(){
-
-    // this changes the color of the box green when the mouse hovers over
-  $('.row').on('mouseover', function (){
-    $(this).css('background-color', 'rgba(118,157,151,.7)').on('mouseout', function (){
-      //this changes the color of the background back to white after mouse over
-      $(this).css('background-color', 'rgba(255,255,255,.863)');
-    });
-  })
-
-  // this changes the color of the box to pink when the box is clicked
-  // $('.row').on('click', function (){
-  //   $(this).css('background-color', 'rgba(236,178,237,.863)').on('mouseout', function (){
-  //     $(this).css('background-color', 'rgba(236,178,237,.863)');
-  //   });
-  // })
-})
-
-
-//
-$(function(){
-//   this changes the color of the box to pink when the box is clicked
-  $('.row').on('click', function (){
-    $(this).css('background-color', 'rgba(236,178,237,.863)').on('mouseout', function (){
-      $(this).css('background-color', 'rgba(236,178,237,.863)');
-    });
-  })
-})
-
+// var player = 1;
+// var gameboard = $('#gameboard');
+// var turn =
 //
 //
-// if (x = 'div 1, div2, div3'){
-//   alert('player 1 wins!');
+// function patternForCurrentPlayer(player) {
+//   if(player == 1) {
+//     return '.marked1';
+//   } else {
+//     return '.marked2';
+//   }
 // }
-//
-// x('div1, div2, div3');
+
+$(function(){
+  $('.row').on('click', (function firstPlayer(){
+    if($(this).hasClass('marked1')){
+      alert("Cheater! Cheater! Pumpkin Eater!");
+    } else if ($(this).hasClass('marked2')){
+      alert("this is already clicked dummy!");
+    } else {
+      $(this).addClass('marked1').append('<h3>X</h3>');
+    }
+
+
+}))
+})
+
+
+
+
+$(function(){
+  var x = false;
+  setInterval(function() {
+      $("h1").css("color", x ? "#DC9FFA" : "#FA9FD9");
+      x = !x;
+  }, 400);
+});
+
+
+// $(function(){
+//   // var Winner = function findWinner(){
+//   // player 1 accross wins
+//   if($('.row1' && '.row2' && '.row3').hasClass('marked1')){
+//   alert("player 1 wins");
+//   } else if($('.row4' && '.row5' && '.row6').hasClass('marked1')){
+//   alert("player 1 wins");
+//   } else if($('.row7' && '.row8' && '.row9').hasClass('marked1')){
+//   alert("player 1 wins");
+//   // player 1 diagonal wins
+//   } else if($('.row1' && '.row5' && '.row9').hasClass('marked1')){
+//   alert("player 1 wins");
+//   } else if($('.row3' && '.row5' && '.row7').hasClass('marked1')){
+//   alert("player 1 wins");
+//   //player 1 down wins
+//   } else if($('.row1' && '.row4' && '.row7').hasClass('marked1')){
+//   alert("player 1 wins");
+//   } else if($('.row2' && '.row5' && '.row8').hasClass('marked1')){
+//   alert("player 1 wins");
+//   } else if($('.row3' && '.row6' && '.row9').hasClass('marked1')){
+//   alert("player 1 wins");
+//   }
+//   // player 2 across wins
+//    else if($('.row1' && '.row2' && '.row3').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else if($('.row4' && '.row5' && '.row6').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else if($('.row7' && '.row8' && '.row9').hasClass('marked2')){
+//   alert("player 2 wins");
+//   // diagonal wins
+//   } else if($('.row1' && '.row5' && '.row9').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else if($('.row3' && '.row5' && '.row7').hasClass('marked2')){
+//   alert("player 2 wins");
+//   //down wins
+//   } else if($('.row1' && '.row4' && '.row7').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else if($('.row2' && '.row5' && '.row8').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else if($('.row3' && '.row6' && '.row9').hasClass('marked2')){
+//   alert("player 2 wins");
+//   } else {
+//    alert("CAT");
+//   }
+// // }
+// });
+// //
+// // // reset button
+// // removeClass marked1 and marked2

@@ -4,14 +4,24 @@ body {
 }
 
 h1 {
-  color: rgba(199, 234, 228, .9);
+  color: #DC9FFA;
   display: flex;
   justify-content: center;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 80px;
 }
 
 h2 {
-  color: rgb(236,178,237);
+  color: white;
+  font-family: 'Codystar', cursive;
+  font-size: 60px;
   display: inline-block;
+  margin: 30px;
+  padding: 30px;
+}
+
+h3 {
+  color: white;
 }
 
 .row {
@@ -20,6 +30,10 @@ h2 {
   margin: 1px;
   display: inline-block;
   border-radius: 10px;
+}
+
+.row:hover {
+  background-color: rgba(118,157,151,.7);
 }
 
 .column1 {
@@ -36,9 +50,102 @@ h2 {
 }
 
 #gameboard {
-  margin-top: 75px;
+  margin-top: 45px;
 }
 
 .player1choice {
   background-color: rgba(236,178,237,.863);
+}
+
+button {
+  color: rgba(199, 234, 228, .9);
+  display: inline-block;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 20px;
+  }
+
+
+.playerz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.marked1 {
+  background-color: rgba(248,159,250,.9);
+  padding: 8px 52px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 30px;
+  content: "X";
+}
+
+.marked2 {
+  background-color: rgba(58,37,59,.8);
+  padding: 8px 52px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 30px;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    display: block;
+    font-size: 45px;
+  }
+  .row {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 667px) {
+
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    display: block;
+    font-size: 35px;
+  }
+  .row {
+    padding: 59px;
+  }
+}
+
+@media (max-width: 577px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    display: block;
+    font-size: 20px;
+  }
+  .row {
+    padding: 55px;
+  }
+}
+@media (max-width: 490px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    display: block;
+    font-size: 18px;
+  }
+  .row {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 419px) {
+  h2 {
+    display: block;
+    font-size: 12px;
+  }
+  .row {
+    padding: 40px;
+  }
 }
