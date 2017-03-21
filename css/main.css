@@ -23,11 +23,19 @@ h2 {
   padding: 30px;
 }
 
+p{
+  color: rgba(199, 216, 237, .9);
+  font-family: 'Bungee Inline', cursive;
+  font-size: 20px;
+}
+
 .scorebox1 {
   color: white;
   text-shadow: 0px 1px 0px white;
   font-size: 40px;
   font-family: 'Codystar', cursive;
+  margin: 10px;
+  background-color: white;
 }
 
 .scorebox2 {

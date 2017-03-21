@@ -9,7 +9,7 @@ $(document).ready(function() {
   // within the patternForCurrentPlayer it also tracks clicks
   $('.row').on('click', patternForCurrentPlayer);
   //looks for a Winner
-
+  addPoint();
 })
 
 //when a click happens track clicks. looks at function below called clickCounter
@@ -30,42 +30,38 @@ function patternForCurrentPlayer() {
   //if counter is not divisilbe by 2 then add player 1
   if (counter % 2 !== 0) {
     if ($(this).hasClass('marked1')) {
-      alert("Cheater! Cheater! Pumpkin Eater!");
+      $('.messages').html("Cheater! Cheater! Pumpkin Eater!").fadeOut(4000);
+      // alert("Cheater! Cheater! Pumpkin Eater!");
     } else if ($(this).hasClass('marked2')) {
-      alert("this is already clicked dummy!");
+      $('.messages').html("This is already clicked dummy!").fadeOut(4000);
+      // alert("This is already clicked dummy!");
     } else {
       $(this).addClass('marked1').append('<h3>X</h3>')
       //now it adds the click counter if it does add the class
       clickCounter();
       lookForWinner();
+      addPoint();
     }
   }
   //if it is divisible by 2 then put player2
   else {
     if ($(this).hasClass('marked1')) {
-      alert("Cheater! Cheater! Pumpkin Eater!");
+      $('.messages').html("Cheater! Cheater! Pumpkin Eater!").fadeOut(4000);
+      // alert("Cheater! Cheater! Pumpkin Eater!");
     } else if ($(this).hasClass('marked2')) {
-      alert("this is already clicked dummy!");
+      $('.messages').html("This is already clicked dummy!").fadeOut(4000);
+      // alert("this is already clicked dummy!");
     } else {
       $(this).addClass('marked2').append('<h3>O</h3>');
       //now it adds the click counter if it does add the class
       clickCounter();
       lookForWinner();
+      addPoint();
     }
 
   }
 }
 
-// function noWinner() {
-//   if (counter === 10){
-//   alert('WE NEED A WINNER. PLAY AGAIN!');
-// }
-// }
-
-// if (counter >= 9 && active == true){
-//   var active = false;
-//   alert('We need a winner. PLAY AGAIN!');
-// }
 
 // this is for the flashing title
 $(function() {
@@ -129,7 +125,16 @@ function lookForWinner() {
     alert("player 2 wins");
   } else if ($('.row3').hasClass('marked2') && $('.row6').hasClass('marked2') && $('.row9').hasClass('marked2')) {
     alert("player 2 wins");
-  } else if (counter >= 10 ){
+  } else if (counter >= 10) {
     alert('We need a winner. PLAY AGAIN!');
   }
 };
+
+function addPoint() {
+  var i = 1;
+  if (lookForWinner === $('marked1')) {
+    $('.scorebox1').html(i++);
+  } else if (lookForWinner === $('marked2')){
+    $('.scorebox2').html(i++);
+  }
+}
