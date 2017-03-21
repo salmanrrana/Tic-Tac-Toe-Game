@@ -9,7 +9,7 @@ $(document).ready(function() {
   // within the patternForCurrentPlayer it also tracks clicks
   $('.row').on('click', patternForCurrentPlayer);
   //looks for a Winner
-  lookForWinner();
+
 })
 
 //when a click happens track clicks. looks at function below called clickCounter
@@ -37,6 +37,7 @@ function patternForCurrentPlayer() {
       $(this).addClass('marked1').append('<h3>X</h3>')
       //now it adds the click counter if it does add the class
       clickCounter();
+      lookForWinner();
     }
   }
   //if it is divisible by 2 then put player2
@@ -49,10 +50,22 @@ function patternForCurrentPlayer() {
       $(this).addClass('marked2').append('<h3>O</h3>');
       //now it adds the click counter if it does add the class
       clickCounter();
+      lookForWinner();
     }
 
   }
 }
+
+// function noWinner() {
+//   if (counter === 10){
+//   alert('WE NEED A WINNER. PLAY AGAIN!');
+// }
+// }
+
+// if (counter >= 9 && active == true){
+//   var active = false;
+//   alert('We need a winner. PLAY AGAIN!');
+// }
 
 // this is for the flashing title
 $(function() {
@@ -77,7 +90,6 @@ $(function() {
 
 function lookForWinner() {
   // player 1 accross wins
-  debugger;
   if ($('.row1').hasClass('marked1') && $('.row2').hasClass('marked1') && $('.row3').hasClass('marked1')) {
     alert('player 1 wins');
     debugger;
@@ -117,7 +129,7 @@ function lookForWinner() {
     alert("player 2 wins");
   } else if ($('.row3').hasClass('marked2') && $('.row6').hasClass('marked2') && $('.row9').hasClass('marked2')) {
     alert("player 2 wins");
-  } else {
-    alert("WE NEED A WINNER!!!! PLAY NOW!!!!!");
+  } else if (counter >= 10 ){
+    alert('We need a winner. PLAY AGAIN!');
   }
 };
