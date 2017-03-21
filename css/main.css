@@ -1,6 +1,7 @@
 body {
   background-image: url("http://68.media.tumblr.com/e0c1d9492d24af1dcf870981c42bfb1a/tumblr_ob7aj22Wq71ug743po1_1280.jpg");
   background-size: cover;
+  text-align: center;
 }
 
 h1 {
@@ -12,12 +13,34 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: rgba(199, 216, 237, .9);
   font-family: 'Codystar', cursive;
   font-size: 60px;
+  text-shadow: 0px 3px 0px #000000;
   display: inline-block;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
   padding: 30px;
+}
+
+.scorebox1 {
+  color: white;
+  text-shadow: 0px 1px 0px white;
+  font-size: 40px;
+  font-family: 'Codystar', cursive;
+}
+
+.scorebox2 {
+  color: white;
+  text-shadow: 0px 1px 0px white;
+  font-size: 40px;
+  font-family: 'Codystar', cursive;
+}
+
+.counter {
+  color: rgba(199, 216, 237, .9);
+  font-family: 'Bungee Inline', cursive;
+  font-size: 30px;
 }
 
 h3 {
@@ -25,7 +48,7 @@ h3 {
 }
 
 .row {
-  background-color: rgba(255,255,255,.863);
+  background-color: rgba(255, 255, 255, .863);
   padding: 65px;
   margin: 1px;
   display: inline-block;
@@ -33,17 +56,19 @@ h3 {
 }
 
 .row:hover {
-  background-color: rgba(118,157,151,.7);
+  background-color: rgba(118, 157, 151, .7);
 }
 
 .column1 {
   display: flex;
   justify-content: center;
 }
+
 .column2 {
   display: flex;
   justify-content: center;
 }
+
 .column3 {
   display: flex;
   justify-content: center;
@@ -54,18 +79,18 @@ h3 {
 }
 
 .player1choice {
-  background-color: rgba(236,178,237,.863);
+  background-color: rgba(236, 178, 237, .863);
 }
 
 button {
-  color: rgba(199, 234, 228, .9);
+  color: rgba(255, 255, 255, .9);
+  background-color: #DC9FFA;
   display: inline-block;
-  justify-content: center;
   border-radius: 30px;
   font-family: 'Bungee Inline', cursive;
   font-size: 20px;
-  }
-
+  margin-top: 10px;
+}
 
 .playerz {
   display: flex;
@@ -74,21 +99,20 @@ button {
 }
 
 .marked1 {
-  background-color: rgba(248,159,250,.9);
+  background-color: rgba(248, 159, 250, .9);
   padding: 8px 52px;
   font-family: 'Bungee Inline', cursive;
   font-size: 30px;
-  content: "X";
 }
 
 .marked2 {
-  background-color: rgba(58,37,59,.8);
+  background-color: rgba(58, 37, 59, .8);
   padding: 8px 52px;
   font-family: 'Bungee Inline', cursive;
   font-size: 30px;
 }
 
-@media (max-width: 799px) {
+/*@media (max-width: 799px) {
   h1 {
     font-size: 36px;
   }
@@ -100,6 +124,7 @@ button {
     padding: 60px;
   }
 }
+
 
 @media (max-width: 667px) {
 
@@ -148,4 +173,7 @@ button {
   .row {
     padding: 40px;
   }
-}
+  .row:click {
+    padding: 0;
+  }
+}*/
