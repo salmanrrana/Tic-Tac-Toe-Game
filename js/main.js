@@ -2,14 +2,13 @@ alert('sanity check');
 
 //sets the counter number to 1 in order to track future clicks
 var counter = 1
-
+var i = 0;
+var j = 0;
 
 $(document).ready(function() {
   //when a row is clicked, add the pattern. looks at function below called patternForCurrentPlayer and
   // within the patternForCurrentPlayer it also tracks clicks
   $('.row').on('click', patternForCurrentPlayer);
-  //looks for a Winner
-  addPoint();
 })
 
 //when a click happens track clicks. looks at function below called clickCounter
@@ -87,54 +86,52 @@ $(function() {
 function lookForWinner() {
   // player 1 accross wins
   if ($('.row1').hasClass('marked1') && $('.row2').hasClass('marked1') && $('.row3').hasClass('marked1')) {
-    alert('player 1 wins');
-    debugger;
+    alert('Player 1 kicked butt');
   } else if ($('.row4').hasClass('marked1') && $('.row5').hasClass('marked1') && $('.row6').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Player 1 is master of all");
   } else if ($('.row7').hasClass('marked1') && $('.row8').hasClass('marked1') && $('.row9').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Player 1 will succeed in life");
     // player 1 diagonal wins
   } else if ($('.row1').hasClass('marked1') && $('.row5').hasClass('marked1') && $('.row9').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Player 2 must now buy lunch for Player 1 for the rest of the year");
   } else if ($('.row3').hasClass('marked1') && $('.row5').hasClass('marked1') && $('.row7').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Ding Dang Player 1...You Rule!!!");
     //player 1 down wins
   } else if ($('.row1').hasClass('marked1') && $('.row4').hasClass('marked1') && $('.row7').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Player 1 will have nothing but luck in life");
   } else if ($('.row2').hasClass('marked1') && $('.row5').hasClass('marked1') && $('.row8').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Go buy Player 1 a new pair of socks, Player 2");
   } else if ($('.row3').hasClass('marked1') && $('.row6').hasClass('marked1') && $('.row9').hasClass('marked1')) {
-    alert("player 1 wins");
+    alert("Hey! Good Job Player 1. Im gonna start calling you Jeff");
   }
   // player 2 across wins
   else if ($('.row1').hasClass('marked2') && $('.row2').hasClass('marked2') && $('.row3').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert('Player 2 kicked butt');
   } else if ($('.row4').hasClass('marked2') && $('.row5').hasClass('marked2') && $('.row6').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Player 2 is master of all");
   } else if ($('.row7').hasClass('marked2') && $('.row8').hasClass('marked2') && $('.row9').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Player 1 must now buy lunch for Player 2 for the rest of the year");
     // diagonal wins
   } else if ($('.row1').hasClass('marked2') && $('.row5').hasClass('marked2') && $('.row9').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Hey! Good Job Player 1. Im gonna start calling you Julia");
   } else if ($('.row3').hasClass('marked2') && $('.row5').hasClass('marked2') && $('.row7').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Ding Dang Player 2...You Rule!!!");
     //down wins
   } else if ($('.row1').hasClass('marked2') && $('.row4').hasClass('marked2') && $('.row7').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Go buy Player 2 a new pair of socks, Player 1. Now!!");
   } else if ($('.row2').hasClass('marked2') && $('.row5').hasClass('marked2') && $('.row8').hasClass('marked2')) {
     alert("player 2 wins");
   } else if ($('.row3').hasClass('marked2') && $('.row6').hasClass('marked2') && $('.row9').hasClass('marked2')) {
-    alert("player 2 wins");
+    alert("Player 2 will have nothing but luck in life");
   } else if (counter >= 10) {
     alert('We need a winner. PLAY AGAIN!');
   }
 };
 
 function addPoint() {
-  var i = 1;
-  if (lookForWinner === $('marked1')) {
+  if (lookForWinner === 'marked1') {
     $('.scorebox1').html(i++);
-  } else if (lookForWinner === $('marked2')){
-    $('.scorebox2').html(i++);
+  } else if (lookForWinner === 'marked2'){
+    $('.scorebox2').html(j++);
   }
 }
