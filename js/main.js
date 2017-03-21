@@ -1,4 +1,4 @@
-alert('sanity check');
+
 
 //sets the counter number to 1 in order to track future clicks
 var counter = 1
@@ -171,9 +171,7 @@ function lookForWinner() {
     $('.scorebox2').html(score2);
     alert("Player 2 will have nothing but luck in life");
   } else if (counter >= 10) {
-    var score2= $('.scorebox2').html();
-    score2++
-    $('.scorebox2').html(score2);
+
     alert('We need a winner. PLAY AGAIN!');
   }
 };
