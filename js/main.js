@@ -2,6 +2,7 @@
 
 //sets the counter number to 1 in order to track future clicks
 var counter = 1
+console.log(counter);
 
 $(document).ready(function() {
   //when a row is clicked, add the pattern. looks at function below called patternForCurrentPlayer and
@@ -34,11 +35,11 @@ function patternForCurrentPlayer() {
       // $('.messages').html("This is already clicked dummy!").fadeOut(4000);
       alert("This is already clicked dummy!");
     } else {
-      $(this).addClass('marked1').append('<h3>X</h3>')
+      $(this).addClass('marked1').html('<h3>X</h3>').css("textAlign","center");
       //now it adds the click counter if it does add the class
       clickCounter();
+      //after it adds the click, it will now run the function that looks for a winner
       lookForWinner();
-      addPoint();
     }
   }
   //if it is divisible by 2 then put player2
@@ -55,7 +56,6 @@ function patternForCurrentPlayer() {
       clickCounter();
       //it will also look for a winner after each turn
       lookForWinner();
-      addPoint();
     }
 
   }

@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+text {
+  color: #fff;
+}
+
 h1 {
   color: #DC9FFA;
   display: flex;
@@ -14,10 +18,10 @@ h1 {
 }
 
 h2 {
-  color: rgba(199, 216, 237, .9);
-  font-family: 'Codystar', cursive;
+  color: rgba(255, 255, 255, .9);
+  font-family: 'Bungee Inline', cursive;
   font-size: 60px;
-  text-shadow: 0px 1px 3px #000000;
+  text-shadow: 0px 0px 4px white;
   display: inline-block;
   margin-top: 30px;
   margin-bottom: 0;
@@ -36,14 +40,14 @@ p{
   color: white;
   text-shadow: 0px 0px 4px white;
   font-size: 45px;
-  font-family: 'Codystar', cursive;
+  font-family: 'Bungee Inline', cursive;
 }
 
 .scorebox2 {
   color: white;
   text-shadow: 0px 0px 4px white;
   font-size: 45px;
-  font-family: 'Codystar', cursive;
+  font-family: 'Bungee Inline', cursive;
 }
 
 .counter {
@@ -132,6 +136,8 @@ button {
   }
   .row {
     padding: 60px;
+    height: 8px;
+    width: 8px;
   }
 }
 
@@ -144,9 +150,16 @@ button {
   h2 {
     display: block;
     font-size: 35px;
+    font-family: 'Bungee Inline', cursive;
   }
   .row {
     padding: 59px;
+  }
+  .scorebox1{
+    font-family: 'Bungee Inline', cursive;
+  }
+  .scorebox2 {
+    font-family: 'Bungee Inline', cursive;
   }
 }
 
@@ -157,9 +170,16 @@ button {
   h2 {
     display: block;
     font-size: 20px;
+    font-family: 'Bungee Inline', cursive;
   }
   .row {
     padding: 55px;
+  }
+  .scorebox1{
+    font-family: 'Bungee Inline', cursive;
+  }
+  .scorebox2 {
+    font-family: 'Bungee Inline', cursive;
   }
 }
 @media (max-width: 490px) {
@@ -169,9 +189,19 @@ button {
   h2 {
     display: block;
     font-size: 18px;
+    font-family: 'Bungee Inline', cursive;
   }
   .row {
-    padding: 40px;
+    /*padding: 40px;*/
+    font-size: 18px;
+    height: 2px;
+    width: 2px;
+  }
+  .scorebox1{
+    font-family: 'Bungee Inline', cursive;
+  }
+  .scorebox2 {
+    font-family: 'Bungee Inline', cursive;
   }
 }
 
@@ -182,8 +212,26 @@ button {
   h2 {
     display: block;
     font-size: 18px;
+    font-family: 'Bungee Inline', cursive;
   }
   .row {
-    padding: 40px;
+    /*padding: 40px;*/
     font-size: 18px;
+    height: 2px;
+    width: 2px;
   }
+  .scorebox1{
+    font-family: 'Bungee Inline', cursive;
+  }
+  .scorebox2 {
+    font-family: 'Bungee Inline', cursive;
+  }
+}
+
+@media (max-width: 373px) {
+
+  .row {
+    height: 1px;
+    width: 1px;
+  }
+}
